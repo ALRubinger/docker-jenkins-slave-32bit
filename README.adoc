@@ -4,4 +4,4 @@
 * Tuned to support running in a constrained cloud environment (OpenShift Online Free)
 * Extends from `openshift/jenkins-slave-maven-centos7:latest`
 * Installs `i686` JDK and removes `x86_84` JDK (slimmer memory profile)
-* Sets `MAVEN_OPTS` to keep `mvn` processes from overextending available memory 
+* Sets `_JAVA_OPTIONS` to keep `java` and `javac` processes from overextending available memory 

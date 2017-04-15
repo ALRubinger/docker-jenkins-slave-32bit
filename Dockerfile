@@ -13,7 +13,7 @@ RUN INSTALL_PKGS="java-1.8.0-openjdk.i686 java-1.8.0-openjdk-devel.i686" && \
     yum clean all -y && \
     echo `java -version`
 
-# Set MAVEN_OPTS
-ENV MAVEN_OPTS=-Xmx128m
+# Set global Java options
+ENV _JAVA_OPTIONS=-Xmx128m
 
 USER 1001
