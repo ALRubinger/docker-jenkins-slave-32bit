@@ -5,3 +5,4 @@
 * Extends from `openshift/jenkins-slave-maven-centos7:latest`
 * Installs `i686` JDK and removes `x86_84` JDK (slimmer memory profile)
 * Sets `_JAVA_OPTIONS` to keep `java` and `javac` processes from overextending available memory 
+* Sets a `~/.m2/settings.xml` to drop deployments and recreate them, bypassing a https://github.com/openshiftio/launchpad-jenkins-slave-dockerfile/issues/3[quota limit issue] on OpenShift Online Starter

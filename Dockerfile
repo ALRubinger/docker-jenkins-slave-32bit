@@ -17,3 +17,7 @@ RUN INSTALL_PKGS="java-1.8.0-openjdk.i686 java-1.8.0-openjdk-devel.i686" && \
 ENV _JAVA_OPTIONS=-Xmx128m
 
 USER 1001
+
+# Copy settings.xml 
+# https://github.com/openshiftio/launchpad-jenkins-slave-dockerfile/issues/3
+ADD ./contrib/settings.xml $HOME/.m2/
